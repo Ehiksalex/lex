@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    overflow: hidden;
+    z-index: 1;
+}
+.nav-center{
+    width:90vw;
+    max-width:1120px;
+    /* background:red; */
+}
+.nav-header{
+    height:6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.logo{
+    display: flex;
+    font-size: 2rem;
+    font-weight: bold;
+    color:solid black;
+    align-items:center;
+    padding-top: 20px;
+}
+.nav-btn{
+    padding:0.15rem 0.75rem;
+}
+  
+.nav-btn i{
+    font-size:1.25rem;
+}
+.navbar .navbar-nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    width:100%;
+    height: 100%;
+    align-items: center;
+} 
+.navbar .navbar-nav .nav-item{
+    list-style: none;
+    display: flex;
+    flex-direction:column;
+    /*todo*/
+    height:0;
+    /* overflow:hidden; */
+    transition:0.3s ease-in-out all;
+}
+.navbar .navbar-nav .nav-item .nav-links{
+    text-decoration: none;
+    color:gray;
+    font-size: 20px;
+    height: 80%;
+    padding: 20px 10px;
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    color:#0f172a;
+    letter-spacing:1px;
+    padding: 1rem 0;
+    border-top:1px #64748b;
+    transition:0.3s ease-in-out all;
+}
+.navbar .navbar-nav .nav-item .nav-links:hover{
+    color:red;
+}
+.show-links{
+    height:310px;
+}
+@media screen and (min-width:992px) {
+    .nav-btn{
+      display:none;
+    }
+    .navbar{
+      height:6rem;
+    }
+    .nav-center{
+      display: flex;
+      align-items: center;
+    }
+    .nav-header{
+      height:auto;
+      margin-right: 2rem;
+    }
+    .navbar .navbar-nav .nav-item{
+      height:auto;
+      flex-direction: row;
+      align-items: center;
+      width:100%;
+    }
+    .navbar .navbar-nav .nav-item .nav-links{
+      padding:0;
+      border-top: none;
+      margin-right: 1rem;
+      font-size: 1rem;
+    }
+}
+
+/*
+=============== 
+page
+===============
+*/
+.row{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.grid-item1{
+    grid-area: item1;
+}
+.grid-item2{
+    grid-area: item2;
+    padding-left: 8%;
+}
+.grid-item1, .grid-item2{
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 5px;
+    /* background-color:gray; */
+} 
+.grid-item1 .box, .grid-item2 .box{
+    width:100%;
+    /* background-color:#f0f8ff; */
+    height: 100%;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width:827px){
+    .row{
+        max-width: 600px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "item1"
+        "item2"
+    }
+    .grid-item1 .box, .grid-item2 .box{
+        width:100%;
+        height: 100vh;
+    }
+}
+.grid-item2 h1{
+    font-size: 50px;
+    line-height: 100px;
+    margin-bottom: 5px;
+}
+.grid-item2 h2{
+    font-size: 35px;
+    margin-top: 60px;
+    font-weight: 500;
+}
+button{
+    display: inline-block;
+    width:fit-content;
+    padding: 10px 30px;
+    background-color: orangered;
+    border: none;
+    font-size: 10px;
+    margin: 20px;
+    cursor: pointer;
+    color: #fff;
+    /* transition: transform 0.5s; */
+}
+button:hover{
+    background: #0508aa;
+    /* transform: translateY(-5px); */
+}
+.feature-img{
+    width: 100%;
+    text-align: center;
+}
+.feature-img img{
+    width: 50%;
+}
+.small-img-row{
+    display: flex;
+    width: 80%;
+    margin:70px auto;
+    align-items: center;
+    justify-content: space-around;
+}
+.small-img{
+    width:80%;
+    height: 80%;
+}
+.small-img img{
+    width:120px;
+    cursor: pointer;
+}
+
+#number{
+    padding: 10px 30px;
+    margin: 10px;
+    display: inline;
+    width:fit-content;
+}
+.btn button{
+    background-color: rgb(197, 146, 104);
+    padding: 5px 15px;
+    margin: 10px;
+    display: inline;
+    width:fit-content;
+    color: orangered;
+    font-size: large;
+}
